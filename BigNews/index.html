@@ -231,14 +231,14 @@
     <!-- 1.热门焦点 -->
     <script id="focus_news" type="text/html">
         {{each data}}
-            {{if $index == 0}}
-                <li class="first">
+        {{if $index == 0}}
+        <li class="first">
             {{else}}
-                <li>
+        <li>
             {{/if}}
-                    <a href="./article.html?id={{$value.id}}"><img src="{{$value.cover}}" alt=""></a>
-                    <p>{{$value.title}}</p>
-                </li>
+            <a href="./article.html?id={{$value.id}}"><img src="{{$value.cover}}" alt=""></a>
+            <p>{{$value.title}}</p>
+        </li>
         {{/each}}
     </script>
 
@@ -259,7 +259,8 @@
             <h4><a href="./article.html?id={{ v.id }}">{{ v.title }}</a></h4>
             <p>{{@ v.intro }}</p>
             <div class="new_info">
-                <span>标签：{{ v.category }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;阅读( {{ v.read }}
+                <span>标签：{{ v.category }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;阅读(
+                    {{ v.read }}
                     )&nbsp;&nbsp;&nbsp;<i class="fa fa-commenting"></i>&nbsp;评论( {{ v.comments }} )</span>
                 <b>{{ v.date }}</b>
             </div>
@@ -371,5 +372,6 @@
         });
     </script>
 </body>
+121311111
 
 </html>
