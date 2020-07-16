@@ -4,10 +4,13 @@
     $(function () {
         jeDate('#testico', {
             trigger: 'click',
-            theme: { bgcolor: "#00A680", pnColor: "#00DDAA" },//绿色主题
+            theme: {
+                bgcolor: "#00A680",
+                pnColor: "#00DDAA"
+            }, //绿色主题
             format: "YYYY-MM-DD",
             isinitVal: true,
-zIndex:10002,//设置弹出层的层级
+            zIndex: 10002, //设置弹出层的层级
         });
 
         /* 初始化选项 */

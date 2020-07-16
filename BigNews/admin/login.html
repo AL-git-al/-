@@ -15,6 +15,10 @@
   <script src="./libs/jquery-1.12.4.min.js"></script>
   <!-- 引入bootstrap的js文件 -->
   <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+  <!-- 引入login.js -->
+  <script src="./js/login.js"></script>
+  <!-- 引入沙箱函数 -->
+  <script src="./libs/http.js"></script>
 </head>
 
 <body>
@@ -39,7 +43,7 @@
   </div>
 
   <!-- 模态框 -->
-  <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -48,18 +52,15 @@
           <h4 class="modal-title">友情提示</h4>
         </div>
         <div class="modal-body">
-          <p></p>
+          <p>用户名或密码不能为空</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal">确定</button>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
-  
-  <!-- 服务器接口地址 -->
-  <script src="./libs/http.js"></script>
-  <script src="./js/login.js"></script>
+
 </body>
 
 </html>
