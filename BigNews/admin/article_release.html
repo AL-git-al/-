@@ -14,6 +14,14 @@
     <script src="./libs/jquery-1.12.4.min.js"></script>
     <!-- 模板引擎 -->
     <script src="./libs/template-web.js"></script>
+    <script src="./libs/http.js"></script>
+    <script src="./js/article_release.js"></script>
+    <!-- 引入jedate时间插件 -->
+    <link rel="stylesheet" href="./libs/jedate/css/jeDate-test.css">
+    <link rel="stylesheet" href="./libs/jedate/css/jeDate.css">
+    <script src="./libs/jedate/js/jedate.js"></script>
+    <!-- 引入富文本插件 -->
+    <script src="./libs/wangEditor.min.js"></script>
 </head>
 
 <body>
@@ -51,11 +59,19 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">发布时间：</label>
                     <div class="col-sm-4">
+                        <div class="jeinpbox">
+                            <input class="jeinput" id="test" type="text"
+                                placeholder="请选择" readonly="">
+                            <div class="icons jebtns"
+                                onclick="jeDate('#test',{trigger:false, isinitVal: true, festival: true, format:'YYYY-MM-DD',minDate: '2014-09-19 00:00:00',zIndex: 99999,})"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">文章内容：</label>
                     <div class="col-sm-10">
+                        <div id="editor">
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -70,3 +86,9 @@
 </body>
 
 </html>
+
+<script type="text/html" id="render">
+    {{each data v}}
+    <option value={{v.id}}>{{v.name}}</option>
+    {{/each}}
+</script>

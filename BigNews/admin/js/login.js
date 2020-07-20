@@ -26,7 +26,7 @@ $(document).ready(function () {
                     $('.modal-body>p').text('登录成功')
                     $('#myModal').modal()
                     localStorage.setItem('token', backData.token)
-                    $('.btn-success').click(function () {
+                    $('body').click(function () {
                         location.href = 'index.html'
                     })
                 } else if (backData.code == 400) {
